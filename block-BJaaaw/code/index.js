@@ -70,6 +70,27 @@ houseName == "stark" || houseName == "lannister"
 
 // 6. Write a program that takes the number of the month(1 - 12) and alert number of days in the month.
 
+let month = Number(prompt("Enter the number of Month"));
+
+switch (month) {
+  case 1:
+  case 3:
+  case 5:
+  case 7:
+  case 8:
+  case 10:
+  case 12:
+    alert("31 Days");
+    break;
+
+  case 2:
+    alert("28 Days");
+    break;
+
+  default:
+    alert("30 days");
+}
+
 /* 7.
 - Write a program that take the salery of the user using prompt and alert the in -hand amount.You will find out the in -hand amount by deducting the tax amoun from salery.Conditions are given below.
   - `Salary <= 20000` tax is 10 %
@@ -77,6 +98,19 @@ houseName == "stark" || houseName == "lannister"
   - `Salary > 50000` tax is 30 %
 
 */
+
+let salary_indivdual = Number(prompt("Enter salary of the Individual: "));
+if (salary_indivdual <= 20000) {
+  alert(`Salary is ${0.9 * salary_indivdual}`);
+}
+if (salary_indivdual <= 40000) {
+  alert(`Salary of Individual is ${0.8 * salary_indivdual}`);
+}
+if (salary_indivdual > 50000) {
+  alert(`Salary of the Individual is ${0.7 * salary_indivdual}`);
+} else {
+  alert("Enter Proper Salary");
+}
 
 //  if..else vs switch
 
@@ -91,6 +125,25 @@ Implement the condition give below using`if..else` and`switch` statement.
 
 */
 
+let marks = Number(prompt("Enter Your Marks: "));
+switch (true) {
+  case marks >= 30 || marks <= 50:
+    alert("Grade C");
+    break;
+
+  case marks >= 50 || marks <= 60:
+    alert("Grade B");
+    break;
+
+  case marks >= 80 || marks < 100:
+    alert("Grade A");
+    break;
+
+  default:
+    alert("Grade D");
+    break;
+}
+
 /* 9. Weather app
 
   - Ask user to provide the condition of the weather outside by asking `What is the weather like outside?`
@@ -100,3 +153,26 @@ Implement the condition give below using`if..else` and`switch` statement.
   - If`freezing` alert`Get your sweeter on`
   - Anything else should alert`Not a valid input`
 */
+
+let weather = prompt("Weather Condition?");
+switch (weather) {
+  case "sunny":
+    alert("Wear a T-Shirt");
+    break;
+
+  case "rainy":
+    alert("Don't forget to take your raincoat.");
+    break;
+
+  case "hot":
+    alert("Get a hanky");
+    break;
+
+  case "freezing":
+    alert("Get your sweater on");
+    break;
+
+  default:
+    alert("Not a valid Input!");
+    break;
+}
