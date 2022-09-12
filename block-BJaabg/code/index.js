@@ -16,8 +16,15 @@ var amount = 0;
 // your code goes here
 
 // ⛑ Answer of the above will `$334.76`.
-let unitPrice = (1+TAX_RATE)*(PHONE_PRICE+ACCESSORY_PRICE);
-while(unitPrice < SPENDING_THRESHOLD) {
-    unitPrice += ACCESSORY_PRICE*(1+TAX_RATE);
+while (amount < bank_balance) {
+    amount += PHONE_PRICE;
+    if (amount< SPENDING_THRESHOLD) {
+        amount += ACCESSORY_PRICE;
+    }
 }
-console.log(unitPrice);
+
+let totalAmount = amount*(1+TAX_RATE);
+if(totalAmount > bank_balance) {
+    console.log(`Amount: ${totalAmount}`);
+    console.log("Day Dreaming is Not good!")
+}
